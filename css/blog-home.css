@@ -1,0 +1,93 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+  height: 88vh;
+}
+
+.form-admin {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 10%;
+}
+
+.addCss {
+  display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+.container {
+  padding-right: 10px!important;
+  padding-left: 10px!important;
+}
+.wrapper {
+  height: 100%;
+  padding-top: 18%;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+.form {
+  height: 100%; 
+}
+.row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ajouter_style {
+  height: 100%!important;
+}
+h3{
+  padding-left: 4%!important;
+  text-align: center;
+}
+h4{
+  padding-left: 5%;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image_style {
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+}
+
+img {
+  width: 93%!important;
+  border-radius: 10px;
+  box-shadow: 10px 10px 18px -6px rgba(0,0,0,0.57);
+}
+.style-form {
+  display: flex;
+  flex-direction: column;
+}
+.element-article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.article-style {
+  width: 40%;
+}
+.buttonImg{
+  padding-bottom: 2%;
+}
+.test-area-space{
+  margin-bottom: 2%;
+}
+.display {
+  display: none;
+}
