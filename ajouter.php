@@ -17,15 +17,19 @@ if ($_SESSION) {
             <legend>Création d'un article de la boutique </legend>
             <div class="form-group">
               <label for="exampleInputEmail1">Titre</label>
-              <input type="text" name="title" class="form-control" id="exampleInputEmail1">
+              <input type="text" name="title" class="form-control" id="exampleInputEmail1" required>
             </div>
             <div class="form-group">
               <label for="exampleTextarea">Commentaire</label>
-              <textarea class="form-control" id="exampleTextarea" name="commentaire" rows="3"></textarea>
+              <textarea class="form-control" id="exampleTextarea" name="commentaire" rows="3" ></textarea>
+            </div>
+            <div class="form-group">
+              <label>Prix:</label>
+              <input type="number" name="price" required>      
             </div>
             <div class="form-group">
               <label for="exampleInputFile">Image</label>
-              <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="my_file">
+              <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="my_file" required>
             </div>
           </fieldset>
           <button type="submit" class="btn btn-primary">Submit</button>

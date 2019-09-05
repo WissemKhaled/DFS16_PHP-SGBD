@@ -15,7 +15,7 @@ $id = "";
 $user = 'root';
 $pass = '0000';
 $connect = new PDO('mysql:host=localhost;dbname=website', $user, $pass);
-$requete = $connect->prepare("SELECT * FROM users   ");
+$requete = $connect->prepare("SELECT * FROM users WHERE idType != 1 ");
 $requete->execute();
 $allUsers = $requete->fetchAll(PDO::FETCH_ASSOC);
 

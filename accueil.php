@@ -26,7 +26,7 @@ if ($_SESSION) {
               <a href="?modifier?idPost=<?= $post['idPost'] ?>" class="btn btn-primary">Modifier</a>
               <a href="sqlRequete/delete.php?idPost=<?= $post['idPost'] ?>" class="btn btn-danger">Supprimer</a>
             <?php elseif ($_SESSION && ($_SESSION['user']["type"] == 'user')) : ?>
-              <a href="panier.php?idPost=<?= $post['idPost'] ?>" class="btn btn-success disabled">Acheter</a>
+              <a href="sqlRequete/buy.php?idPost=<?= $post['idPost'] ?>" class="btn btn-success">Acheter</a>
               <?php endif ?>
           </div>
         </div>

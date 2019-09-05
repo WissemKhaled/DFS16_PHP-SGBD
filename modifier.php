@@ -6,7 +6,6 @@
     }
         
 
-    $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
     //var_dump($_GET);die;
 
@@ -16,7 +15,7 @@
     $connect = new PDO('mysql:host=localhost;dbname=website', $user, $pass);
     $requete = $connect->prepare("SELECT * FROM post WHERE idPost='$id'");
     $requete->execute();
-    $uniquePost = $requete->fetch(PDO::FETCH_ASSOC);
+    $uniqueArticle = $requete->fetch(PDO::FETCH_ASSOC);
 ?>
 <div class="form">
     <!-- Page Content -->
@@ -24,17 +23,17 @@
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="addCss">
-                <form action="sqlRequete/update.php?idPost=<?= $uniquePost['idPost'] ?>" method="POST" enctype="multipart/form-data"
+                <form action="sqlRequete/update.php?idPost=<?= $uniqueArticle['idPost'] ?>" method="POST" enctype="multipart/form-data"
                 class="style-form">
                     <label>Titre de l'article:</label>
-                    <input type="text" name="title" id="title" value="<?= $uniquePost['title'] ?>" required>
+                    <input type="text" name="title" id="title" value="<?= $uniqueArticle['title'] ?>" required>
                     <label>Nouveau prix:</label>
-                    <input type="number" name="price" id="price" value="<?= $uniquePost['price'] ?>" required>
+                    <input type="number" name="price" id="price" value="<?= $uniqueArticle['price'] ?>" required>
                     <label> Choisir une autre photo ? </label>
-                    <input type="file" name="my_file" value="<?= $uniquePost['photo'] ?>" class="buttonImg" required>
+                    <input type="file" name="my_file" value="<?= $uniqueArticle['photo'] ?>" class="buttonImg" required>
 
                    
-                    <textarea rows="10" cols="50" name="commentaire" class="test-area-space" required><?= $uniquePost['commentaire'] ?></textarea>
+                    <textarea rows="10" cols="50" name="commentaire" class="test-area-space" required><?= $uniqueArticle['commentaire'] ?></textarea>
 
                     <input type="submit" value="Envoyer">
                 </form>

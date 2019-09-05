@@ -4,9 +4,10 @@
     $title = $_POST['title'];
     $commentaire = $_POST['commentaire'];
     $id = $_SESSION['user']['idUser'];
+    $price = $_POST['price'];
 
 
-    if (string ($_FILES['my_file']['name']!="")){
+    if ($_FILES['my_file']['name']){
     // Where the file is going to be stored
         $target_dir = "../css/photos/";
         $file = $_FILES['my_file']['name'];
@@ -20,16 +21,14 @@
     if (file_exists($path_filename_ext)) {
         echo "Sorry, file already exists.";
     } else { 
-        //var_dump('/var/www/html,'' $path_filename_ext, $target_dir); die;
-        $pathFinding = '/var/www/html'.$path_filename_ext;
-        //var_dump($temp_name,$pathFinding) ;die;
+        $pathFinding = $path_filename_ext;
         move_uploaded_file($temp_name, "$pathFinding");
     }
 }
 
 
 $connect = new PDO('mysql:host=localhost;dbname=website', 'root', '0000');
-$requete = "INSERT INTO post (title, commentaire, photo, idUser) VALUES('$title', '$commentaire', '$filename.$ext', $id)";
+$requete = "INSERT INTO post (title, commentaire, price, photo, idUser) VALUES('$title', '$commentaire', '$price', '$filename.$ext', $id)";
 $requete_preparee = $connect->prepare($requete);
 $requete_preparee->execute();
 

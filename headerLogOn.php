@@ -47,7 +47,7 @@ require_once("./sqlRequete/db.php");
                         </li>
                     <?php elseif  ($_SESSION['user']["type"] == 'user' ) : ?>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="?panier" >Panier</a>
+                            <a class="nav-link" href="?panier" >Panier</a>
                         </li>
                     <?php endif ?>
                     <li class="nav-item">
